@@ -1,0 +1,113 @@
+import CartWidget from '../CartWidget/CartWidget';
+import './navbar.css'
+
+
+
+
+
+const Navbar = () => {
+
+
+   return (
+
+
+      <>
+
+<nav className="navbar navbar-muted navbar-expand-lg bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="index.html">
+      {" "}
+      <img src="./assets/img/logoindira.png" alt="hey" width={40} height={40} />
+    </a>
+    <button
+      className="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span className="navbar-toggler-icon" />
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="vision.html">
+            Visión
+          </a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="mision.html">
+            Misión
+          </a>
+        </li>
+        <li className="nav-item dropdown">
+          <a
+            className="nav-link dropdown-toggle"
+            href="teayudo.html"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Te ayudo
+          </a>
+          <ul className="dropdown-menu">
+            <li>
+              <a className="dropdown-item" href="teayudo.html">
+                Desarrolla tu potencial
+              </a>
+            </li>
+            <li>
+              <a className="dropdown-item" href="teayudo.html">
+                Aumenta tus ingresos
+              </a>
+            </li>
+            <li>
+              <hr className="dropdown-divider" />
+            </li>
+            <li>
+              <a className="dropdown-item" href="teayudo.html">
+                Organiza tus finanzas personales
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="contacto.html">
+            Contacto
+          </a>
+        </li>
+      </ul>
+      <CartWidget/>
+      <form className="d-flex" role="search">
+     
+        <input
+          className="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button className="btn btn-outline-btn-light" type="submit">
+          Buscar
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+         
+
+
+
+      </>
+
+
+   );
+
+   
+
+}
+
+export default Navbar;
