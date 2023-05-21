@@ -1,5 +1,6 @@
 import CartWidget from '../CartWidget/CartWidget';
 import './navbar.css'
+import logo from '../../assets/img/logoindira.png'
 
 
 
@@ -17,7 +18,7 @@ const Navbar = () => {
   <div className="container-fluid">
     <a className="navbar-brand" href="index.html">
       {" "}
-      <img src="./assets/img/logoindira.png" alt="hey" width={40} height={40} />
+      <img src={logo} alt="hey" width={30} height={30} />
     </a>
     <button
       className="navbar-toggler"
@@ -32,6 +33,12 @@ const Navbar = () => {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li className="nav-item">
+          <h2 className="tituloNabvar">IDR</h2>
+        </li>
+
+
         <li className="nav-item">
           <a className="nav-link active" aria-current="page" href="vision.html">
             Visión
