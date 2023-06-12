@@ -1,9 +1,9 @@
 
 import React from 'react';
-import Item from '../../ItemListContainer/Item/Item'
+import Item from '../Item/Item'
 
 
-export const ItemList = ({listaProductos }) => {
+ const ItemList = ({listaProductos }) => {
     return (
       <div
         style={{
@@ -14,11 +14,11 @@ export const ItemList = ({listaProductos }) => {
         }}
       >
     
-        {listaProductos.map((producto) => (
+        {listaProductos.map((productomapeado) => (
          
-         <Item producto={producto} key={producto.id}/>
+         <Item producto={productomapeado} key={productomapeado.id}/>
 
-        
+      
           
         ))}
        
@@ -26,3 +26,4 @@ export const ItemList = ({listaProductos }) => {
     );
   };
   
+  export default ItemList 

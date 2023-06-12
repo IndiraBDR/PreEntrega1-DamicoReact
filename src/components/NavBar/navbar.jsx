@@ -6,7 +6,7 @@ import logo from '../../assets/img/logoindira.png'
 
 
 
-const Navbar = () => {
+const NavBar = () => {
 
 
   return (
@@ -116,4 +116,4 @@ const Navbar = () => {
 
 }
 
-export default Navbar;
+export {NavBar}

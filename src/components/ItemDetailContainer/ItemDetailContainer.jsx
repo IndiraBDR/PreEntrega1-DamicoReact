@@ -1,10 +1,43 @@
 import { useEffect, useState } from "react"
-import { getProducts } from "../../productos/Productos"
+import { getProducts,getProduct } from "../../services/Productos"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
 
-export const ItemDetailContainer = () =>{
+ const ItemDetailContainer = () =>{
 
- const [productoDetallado,setproductoDetallado]= useState({})
+  const {id}= useParams();
+
+  const [productoDetallado,setproductoDetallado]= useState({})
+
+  useEffect ( ()=> {
+
+    getProduct(id)
+    .then((res)=>setproductoDetallado(res))
+    
+
+  },[])
+
+ 
+
+    return(
+
+        
+       <>
+        <ItemDetail productoDetallado={productoDetallado}/>
+        </>
+        
+      
+    )
+
+}
+
+
+export {ItemDetailContainer};
+
+
+/*
+
+const [productoDetallado,setproductoDetallado]= useState({})
 
 
   useEffect ( ()=> {
@@ -16,12 +49,10 @@ export const ItemDetailContainer = () =>{
   },[])
 
 
-
-    return(
+  return(
 
         <>
         <ItemDetail productoDetallado={productoDetallado}/>
         </>
     )
-
-}
+*/
