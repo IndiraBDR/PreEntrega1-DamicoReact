@@ -30,6 +30,20 @@ const getProduct = (id) => {
 };
 
 
+const getProductsCatId = (catId) => {
+    let error = true;
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (error) {
+                resolve(productos.filter((item)=> item.categoryId === catId));
+            } else {
+                reject('Hubo un error intente mas tarde');
+            }
+        }, 2000);
+    });
+};
 
 
-export { getProducts, getProduct };
+
+
+export { getProducts, getProduct, getProductsCatId };

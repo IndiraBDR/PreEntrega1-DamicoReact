@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 
  const ItemDetailContainer = () =>{
 
+
   const {id}= useParams();
 
   const [productoDetallado,setproductoDetallado]= useState({})
@@ -13,6 +14,7 @@ import { useParams } from "react-router-dom"
 
     getProduct(id)
     .then((res)=>setproductoDetallado(res))
+   
     
 
   },[])
@@ -28,6 +30,8 @@ import { useParams } from "react-router-dom"
         
       
     )
+
+    
 
 }
 

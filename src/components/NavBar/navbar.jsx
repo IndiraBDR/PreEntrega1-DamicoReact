@@ -1,12 +1,44 @@
 import CartWidget from '../CartWidget/CartWidget';
 import './navbar.css'
 import logo from '../../assets/img/logoindira.png'
+//import { NavLink } from 'react-bootstrap';
+import { NavLink,useParams} from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { getCategories } from '../../services/Categories';
+import{getProductsCatId } from'../../services/Productos'
+
+
 
 
 
 
 
 const NavBar = () => {
+
+  const [categories, setCategories] = useState([]);
+
+  const [listaProductos, setListaProductos] = useState([]);
+
+  const{catId} = useParams;
+
+
+
+    useEffect(() => {
+      getProductsCatId (catId)
+        .then((res) => setListaProductos(res))
+        .catch((error) => console.log(error));
+    }
+      , [catId]);
+
+
+  useEffect(() => {
+    getCategories()
+      .then((res) => setCategories(res))
+      .catch((error) => console.log(error));
+  }
+    , []);
+
+
 
 
   return (
@@ -60,6 +92,18 @@ const NavBar = () => {
                   Te ayudo
                 </a>
                 <ul className="dropdown-menu">
+
+                  
+                  {categories.map((itemcategory) =>(
+
+                    <li >
+                      <NavLink to=  {`/category/${itemcategory.id}/`} className="dropdown-item">{itemcategory.name}</NavLink>
+                     
+                    </li>
+
+                  ))}
+
+
                   <li>
                     <a className="dropdown-item" href="teayudo.html">
                       Desarrolla tu potencial
@@ -116,4 +160,4 @@ const NavBar = () => {
 
 }
 
-export {NavBar}
+export { NavBar }

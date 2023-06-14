@@ -8,13 +8,16 @@ import { NavBar,ItemListContainer, ItemDetailContainer } from './components';
 function App() {
   return (
     <>
-      <NavBar></NavBar>
+      
       
       
   
 
       <BrowserRouter>
+
+      <NavBar></NavBar>
         <Routes>
+
           <Route path="/" element={<ItemListContainer greeting="Bienvenidos a mi pagina"/>} />
           <Route path='/product-detalle/:id' element={ <ItemDetailContainer/>}/>
         </Routes>
