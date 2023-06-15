@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
-import { getProducts } from '../../services/Productos';
+import { getProducts,getProductsCatId } from '../../services/Productos';
 import ItemList from '../ItemList/ItemList';
 import './ItemListContainer.css'
 import  { useNavigate,useParams } from 'react-router-dom';
@@ -17,10 +17,13 @@ const ItemListContainer = ({ greeting }) => {
     const{catId}=useParams
    
 
+
+       
+
     useEffect(() => {
       if(catId) {
 
-        getProducts(catId)
+        getProductsCatId(catId)
         .then((res) => setListaProductos(res))
         .catch((error) => console.log(error));
 
