@@ -14,7 +14,8 @@ const ItemListContainer = ({ greeting }) => {
 
     const [listaProductos, setListaProductos] = useState([]);
     const navigate= useNavigate();
-    const{catId}=useParams
+    
+    const{catId}=useParams();
    
 
 

@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom"
 
   const {id}= useParams();
 
-  const [productoDetallado,setproductoDetallado]= useState({})
+  const [productoDetallado,setproductoDetallado]= useState()
 
   useEffect ( ()=> {
 
@@ -19,11 +19,14 @@ import { useParams } from "react-router-dom"
 
   },[])
 
- 
+
+   if(!productoDetallado)
+      return "cargando"
+
+
 
     return(
 
-        
        <>
         <ItemDetail productoDetallado={productoDetallado}/>
         </>
