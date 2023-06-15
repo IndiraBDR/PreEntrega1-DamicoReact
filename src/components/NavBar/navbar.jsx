@@ -16,7 +16,8 @@ import{getProductsCatId } from'../../services/Productos'
 const NavBar = () => {
 
   const [categories, setCategories] = useState([]);
-
+  
+/* borrado por LAURA
   const [listaProductos, setListaProductos] = useState([]);
 
   const{catId} = useParams;
@@ -29,7 +30,7 @@ const NavBar = () => {
         .catch((error) => console.log(error));
     }
       , [catId]);
-
+*/
 
   useEffect(() => {
     getCategories()

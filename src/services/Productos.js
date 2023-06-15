@@ -16,12 +16,12 @@ const getProducts = () => {
 };
 
 
-const getProduct = (id) => {
+const getProduct = (catId) => {
     let error = true;
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if (error) {
-                resolve(productos.find((item)=> item.id === id));
+                resolve(productos.filter((item)=> item.categoryId === catId));
             } else {
                 reject('Hubo un error intente mas tarde');
             }
