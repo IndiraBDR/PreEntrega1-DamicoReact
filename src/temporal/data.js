@@ -25,7 +25,7 @@ export const productos = [
     nombre: "Maximisa tus ingresos",
     descripcion: "xxxxx",
     precio: 2000,
-    imagen: "https://www.murcia.com/noticias/fotos/1117655200w2.jpg",
+    imagen: " https://www.elfinancierocr.com/resizer/LsWuY1CWNdOrREY2KGzzqnsYmFU=/300x0/arc-anglerfish-arc2-prod-gruponacion/public/7UI6MRBEPBHJZOOCZM3B752FFE.jpg",
     cantidad: "6",
   },
 
@@ -35,7 +35,7 @@ export const productos = [
     nombre: "Control financiero",
     descripcion: "aaaaa",
     precio: 4000,
-    imagen: "https://www.murcia.com/noticias/fotos/1117655200w2.jpg",
+    imagen: "https://www.elfinancierocr.com/resizer/LsWuY1CWNdOrREY2KGzzqnsYmFU=/300x0/arc-anglerfish-arc2-prod-gruponacion/public/7UI6MRBEPBHJZOOCZM3B752FFE.jpg",
     cantidad: "9",
   },
 
@@ -45,7 +45,7 @@ export const productos = [
     nombre: "Control financiero para empresas",
     descripcion: "aaaaa",
     precio: 4000,
-    imagen: "https://www.murcia.com/noticias/fotos/1117655200w2.jpg",
+    imagen: "https://www.elfinancierocr.com/resizer/LsWuY1CWNdOrREY2KGzzqnsYmFU=/300x0/arc-anglerfish-arc2-prod-gruponacion/public/7UI6MRBEPBHJZOOCZM3B752FFE.jpg",
     cantidad: "9",
   },
 
@@ -55,7 +55,7 @@ export const productos = [
     nombre: "Aprendiendo a invertir",
     descripcion: "aaaaa",
     precio: 4000,
-    imagen: "https://www.murcia.com/noticias/fotos/1117655200w2.jpg",
+    imagen: "https://lamenteesmaravillosa.com/wp-content/uploads/2016/05/Mujer-pensando-en-sus-proyectos.jpg",
     cantidad: "9",
   }
 

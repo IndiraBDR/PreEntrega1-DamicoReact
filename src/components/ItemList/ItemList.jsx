@@ -11,7 +11,7 @@ import Item from '../Item/Item'
           justifyContent: 'space-around',
           alignItems: 'center',
           flexwrap: 'wrap',
-          width: '90%'
+        
         }}
       >
     

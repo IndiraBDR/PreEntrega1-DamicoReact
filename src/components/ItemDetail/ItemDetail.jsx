@@ -1,6 +1,8 @@
 
 import { ItemCounter } from "../../components/index";
 
+import './ItemDetail.css'
+
 
 export const ItemDetail = ({productoDetallado})=> {
 
@@ -14,13 +16,15 @@ const onAdd = (cantidadDelCounter) => {
 return(
 
     <div className="card"
-    style={{ width: '20rem', height: '23rem', margin: 'auto', alignSelf: 'center' }}>
+    style={{ width: '15rem', height: '32rem', alignSelf: 'center' }}>
+        <div class="card-body">
         <p>{id}</p>
-        <h2>{nombre}</h2>
-        <img src={imagen} />
-        <p>{descripcion}</p>
-        <b>{precio}</b>
+        <b class="card-title">{nombre}</b>
+        <img  src={imagen} class="card-img-top"/>
+        <p class="card-text">{descripcion}</p>
+        <b class="card-text">{precio}</b>
         <ItemCounter stock={cantidad} initial={1}  onAdd={onAdd} />
+        </div>
     </div>
 )
 

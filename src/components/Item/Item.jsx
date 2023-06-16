@@ -1,4 +1,5 @@
 import React from 'react';
+import '../Item/Item.css'
 
 const Item = ({ producto }) => {
 
@@ -20,11 +21,11 @@ const Item = ({ producto }) => {
     <>
 
       <div className="card"
-        style={{ width: '20rem', height: '23rem', margin: '.5rem', alignSelf: 'center' }} >
-        <img src={imagen} class="card-img-top" />
+        style={{ width: '15rem', height: '24rem', margin: '.5rem', alignSelf: 'center' }} >
+       
         <div class="card-body">
-          <h5 class="card-title">{nombre}</h5>
-          <p class="card-text">{descripcion}</p>
+          <b class="card-title">{nombre}</b>
+          <img src={imagen} class="card-img-top" />
           <p class="card-text">${precio}</p>
           <p class="card-text">stock: {cantidad}</p>
           <button class="btn btn-light" onClick={onProductClicked}>Ver más</button>

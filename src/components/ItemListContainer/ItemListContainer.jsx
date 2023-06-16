@@ -41,7 +41,7 @@ const ItemListContainer = ({ greeting }) => {
 
    
     return (
-      <div>
+      <div >
         <h2>{greeting}</h2>
         <ItemList listaProductos={listaProductos.map(item =>({
           ...item,

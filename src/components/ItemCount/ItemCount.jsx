@@ -33,7 +33,7 @@ export const ItemCounter = ({ stock, initial, onAdd }) =>{
         <>
           <div>
 
-            <button className="btn btn-dark" onClick={restarProducto}>
+            <button className="btn btn-light"  onClick={restarProducto}>
               -
             </button>
 
@@ -41,13 +41,13 @@ export const ItemCounter = ({ stock, initial, onAdd }) =>{
             <span className="btn ">{counter}</span>
 
 
-            <button className="btn btn-dark" onClick={sumarProducto}>
+            <button className="btn btn-light"  onClick={sumarProducto}>
               +
             </button>
 
           </div>
           <button
-            className="btn btn-dark"
+            className="btn btn-light" 
             disabled={counter === 0 || stock === 0}
             onClick={() => onAdd(counter)}
 
@@ -58,6 +58,6 @@ export const ItemCounter = ({ stock, initial, onAdd }) =>{
       );
 
 
-
+      
 
 };
