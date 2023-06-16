@@ -1,8 +1,8 @@
 import React from 'react';
 
- const Item = ({ producto}) => {
+const Item = ({ producto }) => {
 
-  const {nombre, descripcion, precio,imagen,cantidad,onProductClicked} = producto
+  const { nombre, descripcion, precio, imagen, cantidad, onProductClicked } = producto
 
   /*
 
@@ -15,27 +15,28 @@ import React from 'react';
   </div>
 </div>
   */
-    
-    return (
-      <>  
-    
-        <div class="card" style={{width: "16rem"} } >
-          <img src={imagen} class="card-img-top"  />
-          <div class="card-body">
+
+  return (
+    <>
+
+      <div className="card"
+        style={{ width: '20rem', height: '23rem', margin: '.5rem', alignSelf: 'center' }} >
+        <img src={imagen} class="card-img-top" />
+        <div class="card-body">
           <h5 class="card-title">{nombre}</h5>
           <p class="card-text">{descripcion}</p>
           <p class="card-text">${precio}</p>
           <p class="card-text">stock: {cantidad}</p>
-          <button  class="btn btn-light" onClick={onProductClicked}>Ver más</button>
-          </div>
-        
+          <button class="btn btn-light" onClick={onProductClicked}>Ver más</button>
         </div>
-       
-        
-      </>
-    );
-  };
-  
-  export default Item;
+
+      </div>
+
+
+    </>
+  );
+};
+
+export default Item;
 
 

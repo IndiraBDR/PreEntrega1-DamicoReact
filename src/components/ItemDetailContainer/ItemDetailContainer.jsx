@@ -28,7 +28,12 @@ import { useParams } from "react-router-dom"
     return(
 
        <>
-        <ItemDetail productoDetallado={productoDetallado}/>
+     
+
+       <ItemDetail productoDetallado={productoDetallado}/>
+   
+
+       
         </>
         
       

@@ -2,10 +2,11 @@ import CartWidget from '../CartWidget/CartWidget';
 import './navbar.css'
 import logo from '../../assets/img/logoindira.png'
 //import { NavLink } from 'react-bootstrap';
-import { NavLink,useParams} from 'react-router-dom';
+import { NavLink,useParams,useNavigate} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { getCategories } from '../../services/Categories';
 import{getProductsCatId } from'../../services/Productos'
+import{ItemListContainer} from '../../components/index'
 
 
 
@@ -16,6 +17,8 @@ import{getProductsCatId } from'../../services/Productos'
 const NavBar = () => {
 
   const [categories, setCategories] = useState([]);
+
+  const navigateLogo= useNavigate();
   
 /* borrado por LAURA
   const [listaProductos, setListaProductos] = useState([]);
@@ -49,7 +52,7 @@ const NavBar = () => {
 
       <nav className="navbar navbar-muted navbar-expand-lg bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="index.html">
+          <a className="navbar-brand" onClick={()=> navigateLogo(`/`)}>
             {" "}
             <img src={logo} alt="hey" width={30} height={30} />
           </a>
@@ -105,24 +108,7 @@ const NavBar = () => {
                   ))}
 
 
-                  <li>
-                    <a className="dropdown-item" href="teayudo.html">
-                      Desarrolla tu potencial
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="teayudo.html">
-                      Aumenta tus ingresos
-                    </a>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="teayudo.html">
-                      Organiza tus finanzas personales
-                    </a>
-                  </li>
+                
                 </ul>
               </li>
               <li className="nav-item">

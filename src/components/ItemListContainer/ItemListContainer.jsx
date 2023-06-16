@@ -45,7 +45,7 @@ const ItemListContainer = ({ greeting }) => {
         <h2>{greeting}</h2>
         <ItemList listaProductos={listaProductos.map(item =>({
           ...item,
-          onProductClicked:()=> navigate(`/product-detalle/${item.id}`)
+          onProductClicked:()=> navigate(`/item/${item.id}`)
 
         }))}/>
       </div>

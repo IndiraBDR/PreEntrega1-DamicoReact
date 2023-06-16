@@ -8,9 +8,10 @@ import Item from '../Item/Item'
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'space-around',
           alignItems: 'center',
-          flexWrap: 'wrap',
+          flexwrap: 'wrap',
+          width: '90%'
         }}
       >
     

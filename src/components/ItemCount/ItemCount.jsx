@@ -1,25 +1,31 @@
+import { useState } from "react";
 
-export const ItemCounter = () =>{
+ 
+export const ItemCounter = ({ stock, initial, onAdd }) =>{
 
-    const[counter, setCounter]= useState(0)
+    const[counter, setCounter]= useState(initial)
 
-    const sumarProducto = (stock) =>{
+    const sumarProducto = () =>{
 
-        if(counter < stock || counter != 0){
+        if(counter < stock ){
 
         setCounter(counter+1)
 
         }
 
+          
+
     }
 
-    const restarProducto = (stock) =>{
+    const restarProducto = () =>{
 
         if(counter > 0){
 
         setCounter(counter-1)
 
         }
+
+       
 
     }
 
@@ -44,6 +50,7 @@ export const ItemCounter = () =>{
             className="btn btn-dark"
             disabled={counter === 0 || stock === 0}
             onClick={() => onAdd(counter)}
+
           >
             Comprar
           </button>
