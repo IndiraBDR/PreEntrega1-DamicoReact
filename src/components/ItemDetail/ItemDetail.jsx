@@ -16,7 +16,7 @@ const onAdd = (cantidadDelCounter) => {
 return(
 
     <div className="card"
-    style={{ width: '20rem', height: '32rem', alignSelf: 'center' }}>
+    style={{ width: '16rem', height: '32rem', alignSelf: 'center' }}>
         <div class="card-body">
         <p>{id}</p>
         <b class="card-title" >{nombre}</b>
