@@ -10,7 +10,9 @@ import Item from '../Item/Item'
           display: 'flex',
           justifyContent: 'space-around',
           alignItems: 'center',
-          flexwrap: 'wrap',
+          flexWrap: 'wrap',
+          width:'75%',
+          margin:'auto'
         
         }}
       >
