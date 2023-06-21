@@ -1,16 +1,43 @@
 
+import { Link } from "react-router-dom";
 import { ItemCounter } from "../../components/index";
-
 import './ItemDetail.css'
+import { useState, useContext } from "react";
+import { CartContex} from "../Cart/CartContex";
+
 
 
 export const ItemDetail = ({productoDetallado})=> {
 
 const {nombre, descripcion, precio,imagen,id,cantidad} = productoDetallado;
 
-const onAdd = (cantidadDelCounter) => {
-    console.log(`Compraste ${cantidadDelCounter} items`);
-  };
+
+
+const onAddFuncion = (cantidadDelCounter) => {
+
+    addProduct(productoDetallado,cantidadDelCounter);
+    setIrAlCarrito(true)
+  
+
+ //  console.log(cantidadDelCounter);
+    
+};
+
+const [irAlCarrito,setIrAlCarrito]=useState(false)
+const {addProduct} = useContext(CartContex)
+
+
+/*
+
+const onAddFuncion = (cantidadDelCounter) => {
+    setCantidadAgregada(cantidadDelCounter);
+    
+};
+
+
+  const [cantidadAgregada,setCantidadAgregada]= useState()
+
+*/
 
 
 return(
@@ -23,10 +50,15 @@ return(
         <img  src={imagen} class="card-img-top"/>
         <p class="card-text">{descripcion}</p>
         <b class="card-text">{precio}</b>
-        <ItemCounter stock={cantidad} initial={1}  onAdd={onAdd} />
+        <br></br>
+       
+        {irAlCarrito ? <Link to='/cart' className="btn btn-light" >Ir al carrito</Link> : < ItemCounter stock={cantidad} initial={1}  onAdd={onAddFuncion} />}
+
         </div>
+        
     </div>
 )
 
 
 }
+// {cantidadAgregada ? <Link to='/cart' className="btn btn-light" >Ir al carrito</Link> : < ItemCounter stock={cantidad} initial={1}  onAdd={onAddFuncion} />}
